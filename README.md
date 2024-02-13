@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+If this is the first time you are using this project, run the following commands:
 
-Things you may want to cover:
+```
+bundle install
+rails db:migrate
+```
 
-* Ruby version
+And if you get the `Sprockets::Rails::Helper::AssetNotPrecompiledError` error, stop the server (Ctrl + C) and run the following command before launching the server again.
 
-* System dependencies
+```
+rails assets:precompile
+```
 
-* Configuration
+To launch the server, run the command:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails s
+```
