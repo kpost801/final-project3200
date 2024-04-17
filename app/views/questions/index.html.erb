@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Questions</h1>
+
+<div id="questions">
+  <% @questions.each do |question| %>
+    <%= render question %>
+    <p>
+      <%= question.content %>
+      Answer: <%= question.answer ? 'True' : 'False' %>
+      <%= link_to "Show this question", question %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New question", new_question_path %>
